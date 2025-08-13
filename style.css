@@ -2158,4 +2158,47 @@ button.btn-submit:hover {
   }
 }
 
+/* -------------------- MOBILE HEADER RESPONSIVE -------------------- */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 15px;
+  }
+
+  .search-container {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+  }
+
+  .search-container input {
+    flex: 1;           /* makes input take most space */
+    font-size: 0.9rem; /* smaller font */
+    padding: 6px 10px;
+  }
+
+  .search-container button {
+    padding: 6px 10px; /* smaller search button */
+    font-size: 0.9rem;
+  }
+
+  .header-right {
+    margin-left: auto;  /* push cart & theme to right */
+    display: flex;
+    gap: 15px;
+  }
+
+  .cart-container i,
+  .theme-toggle i {
+    font-size: 1.2rem; /* slightly smaller icons */
+  }
+
+  .cart-badge {
+    font-size: 0.8rem; /* smaller badge */
+    top: -5px;
+    right: -5px;
+  }
+}
 
