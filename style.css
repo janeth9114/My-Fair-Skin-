@@ -2044,69 +2044,79 @@ button.btn-submit:hover {
 
 
 
-/* ------------------ PORTRAIT PHONES ------------------ */
+/* ------------------ PORTRAIT PHONES SCALE DOWN ------------------ */
 @media (max-width: 480px) {
-  /* Reduce section padding */
-  section {
-    padding: 15px 10px;
-  }
 
-  /* About box adjustments */
-  .about-box {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .about-text, .about-image {
-    text-align: center;
-  }
-
-  /* Hero adjustments */
+  /* Scale down hero section */
   .hero-container {
-    padding: 20px 10px;
+    padding: 15px 10px;
   }
 
   .hero-container img.hero-image {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    margin-top: 15px;
   }
 
-  /* Headings smaller */
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.2rem; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1rem; }
 
   /* Buttons smaller */
   button, .add-to-cart {
-    padding: 8px 16px;
-    font-size: 0.85rem;
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 
-  /* Services & Products Grid: make cards narrower */
-  .services-grid > *, .products-grid > * {
-    flex: 0 0 200px; /* narrower cards for portrait */
-  }
-
-  /* Contact popup */
-  .contact-popup {
-    width: 90vw;
-    bottom: 70px;
-    right: 5vw;
-    left: 5vw;
+  /* About box: keep columns but shrink text and gap */
+  .about-box {
+    gap: 15px;
     padding: 15px;
   }
 
-  /* Reduce product card image size */
-  .product-card img {
-    height: 120px;
+  .about-text p, .treatment-list li {
+    font-size: 0.85rem;
   }
 
-  /* Reduce footer padding */
+  .about-text .sub-title {
+    font-size: 1rem;
+  }
+
+  /* Services & Products cards: keep horizontal layout but smaller */
+  .services-grid > *, .products-grid > * {
+    flex: 0 0 180px; /* slightly smaller cards */
+  }
+
+  .product-card img {
+    height: 100px;
+  }
+
+  .product-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .product-card .price {
+    font-size: 0.9rem;
+  }
+
+  /* Footer smaller */
   footer {
-    padding: 15px 10px;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  /* Floating buttons & popups */
+  .floating-btn {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+  }
+
+  .contact-popup {
+    width: 90vw;
+    bottom: 60px;
+    right: 5vw;
+    left: 5vw;
+    padding: 10px;
   }
 }
+
 
