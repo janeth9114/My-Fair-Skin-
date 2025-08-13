@@ -884,30 +884,34 @@ body {
 
 @media (max-width: 768px) {
   .hero-content {
-    flex-direction: column; /* stack vertically */
+    flex-direction: column; /* stack vertically: text -> features -> image -> buttons */
     align-items: center;
     gap: 20px;
   }
 
-  /* Text first */
   .hero-text {
     order: 1;
     width: 100%;
     text-align: center;
   }
 
-  /* Features below text */
+  /* Keep features horizontal */
   .hero-features {
     order: 2;
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row; /* side by side */
+    flex-wrap: wrap; /* allow wrapping if too narrow */
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
     margin-top: 15px;
   }
 
   .feature-item {
-    flex: 1 1 100%;
+    flex: 1 1 150px; /* min width for each feature card */
+    max-width: 200px; /* optional limit */
+    height: auto;
+    margin-bottom: 0; /* spacing handled by gap */
   }
 
   /* Image below features */
@@ -919,12 +923,13 @@ body {
     border-radius: 15px;
   }
 
-  /* Buttons last */
+  /* Buttons side by side below image */
   .hero-buttons {
     order: 4;
+    display: flex;
     justify-content: center;
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 15px;
     margin-top: 20px;
   }
 }
