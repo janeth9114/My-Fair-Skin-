@@ -910,10 +910,19 @@ body {
   }
 
   .hero-image {
-    order: 3; /* image after buttons */
-    max-width: 280px; /* smaller image for portrait */
-    margin: 0 auto;
-  }
+  order: 3;
+  max-width: 250px;
+  margin: -20px auto 0; /* pull up image */
+  position: relative;
+  z-index: 1; /* keep image above features */
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
   .hero-features {
     order: 4; /* features last */
