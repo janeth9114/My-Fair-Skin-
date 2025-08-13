@@ -18,6 +18,7 @@ Sunscreens – Daily protection against harmful UV rays
 
 Korean Beauty Products – Popular and effective skincare from Korea
 
+
 ✨ Features
 Responsive Website Design – Works perfectly on desktop, tablet, and mobile
 
@@ -30,6 +31,7 @@ Contact Form – Quick communication with our support team
 Google Sheets Integration – Stores customer orders and bookings
 
 Modern User Interface – Elegant, easy-to-use, and mobile-friendly
+
 
 🛠 Technologies Used
 HTML5 – Structure and content
