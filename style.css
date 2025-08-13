@@ -2062,7 +2062,7 @@ img {
 }
 
 /* Containers should be fluid on small devices */
-.container, .about-box, .services-grid, .products-grid {
+.container, .about-box {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
@@ -2071,44 +2071,6 @@ img {
 /* Headings responsive */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
-}
-
-/* GRID LAYOUTS (products, services, about, etc.) */
-.services-grid, .products-grid, .about-box {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-/* STACK COLUMNS ON SMALLER SCREENS */
-@media (max-width: 900px) {
-  .about-box, .services-grid, .products-grid {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
-  }
-}
-
-/* TEXT AND FONT SIZES */
-h1 {
-  font-size: 2.5rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.5rem;
-}
-p, li {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* REDUCE FONT SIZES FOR TABLETS */
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.2rem; }
-  p, li { font-size: 0.9rem; }
 }
 
 /* HERO SECTION FIX */
@@ -2139,6 +2101,22 @@ nav ul {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+  }
+}
+
+/* TOP BAR: Search, Cart, Dark Mode */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    justify-content: flex-end;
+    flex-wrap: wrap;
   }
 }
 
@@ -2194,16 +2172,41 @@ section {
   }
 }
 
-/* PRODUCT GRID FOR MOBILE */
-.products-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+/* SERVICES & PRODUCTS GRID: HORIZONTAL SCROLL ON MOBILE */
+.services-grid, .products-grid {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-@media (max-width: 480px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
+.services-grid > *, .products-grid > * {
+  flex: 0 0 250px; /* width of each card */
+  scroll-snap-align: start;
+}
+
+/* TEXT AND FONT SIZES */
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+p, li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* REDUCE FONT SIZES FOR TABLETS */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+  p, li { font-size: 0.9rem; }
 }
 
 /* FOOTER */
@@ -2235,4 +2238,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
