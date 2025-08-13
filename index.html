@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Fair Skin - Tanzania</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <!-- ✅ Header Structure -->
+<div class="header-container">
+  <div class="header-left">
+    <h2 class="branding-title">
+      MY FAIR <span class="typewriter-text">SKIN TANZANIA</span>
+    </h2>
+    <p class="branding-title">
+      <span class="fixed">Hydra</span>
+      <span class="animated-word" data-words='["Enzymes,", "CO2 laser"]'></span>
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="I'M LOOKING FOR ...." autocomplete="off" />
+    <button id="search-btn" class="search-icon-btn" type="button">
+      <i class="fas fa-search"></i>
+    </button>
+    <ul id="search-list" class="search-suggestions" style="display:none; position:absolute; background:white; width: 100%; max-height: 150px; overflow-y: auto; border: 1px solid #ccc; z-index: 10;"></ul>
+  </div>
+
+  <div class="header-right">
+    <div class="cart-container">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count" class="cart-badge">0</span>
+    </div>
+    <!-- Dark/Light Mode Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </div>
+  </div>
+</div>
+
+<header class="navbar-container">
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#hero">Home</a></li>
+      <li class="nav-item"><a href="#about">About</a></li>  
+      <li class="nav-item"><a href="#why-us">Why Us</a></li>
+      <li class="nav-item"><a href="#services">Services</a></li>
+      <li class="nav-item"><a href="#products">Products</a></li>
+      <li class="nav-item"><a href="#find-us">Find Us</a></li>
+      <li class="nav-item"><a href="#banners" onclick="showBanners()">More</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hero" class="hero-container">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-heading">
+        Reveal Your <span class="accent">True Glow</span>
+      </h1>
+      <p class="hero-subtext">
+        At <strong>My Fair Skin Tanzania</strong>, we combine advanced machines,
+        expert hands, and premium products to deliver treatments that redefine confidence
+        and natural beauty. Experience personalized care tailored to your skin’s unique
+        needs, and enjoy a relaxing, rejuvenating environment designed just for you.
+      </p>
+
+      <div class="hero-features">
+        <div class="feature-item">
+          <h4>Advanced Technology</h4>
+          <p>We use the latest machines and treatments for safe and effective results.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Expert Care</h4>
+          <p>Our experienced specialists tailor every treatment to your unique skin.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Premium Products</h4>
+          <p>Only top-quality, skin-loving products to nourish and protect your skin.</p>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#services" class="btn primary-btn"><i class="fas fa-spa"></i> Explore Services</a>
+        <a href="#" id="open-booking" class="btn secondary-btn"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/facial 1.jpg" alt="Skincare Treatment" />
+    </div>
+  </div>
+</section>
+<section id="banners" class="banner-section" style="display: none;">
+  <h2 class="section-title">Our Banners</h2>
+
+  <!-- CEO & Staff section -->
+  <div class="banner-item">
+    <h3 class="banner-heading">Meet Our CEO & Team</h3>
+    <div class="multi-image">
+      <img src="images/staff 2.jpg" alt="CEO and Staff Group 1" onclick="openImage(this)">
+      <img src="images/staff.jpg" alt="CEO and Staff Group 2" onclick="openImage(this)">
+      <img src="images/staffs.jpg" alt="CEO and Staff Group 3" onclick="openImage(this)">
+    </div>
+  </div>
+
+  <div class="banner-item spaced">
+    <h3 class="banner-heading">Premium Services</h3>
+    <img src="images/Banner.png" alt="Services Banner" class="banner-image">
+  </div>
+
+  <div class="banner-item spaced">
+    <h3 class="banner-heading">Healthy Skin Campaign</h3>
+    <img src="images/BANNER 2.jpg" alt="Services Banner 2" class="banner-image">
+  </div>
+
+  <!-- Modal for enlarging images -->
+  <div id="imageModal" class="image-modal">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+</section>
+
+<section id="about" class="about-container">
+  <div class="about-box">
+    <div class="about-text">
+      <h2 class="section-title">About Us</h2>
+      <p>
+        At <strong>My Fair Skin</strong>, we are passionate about healthy and glowing skin.
+        Our mission is to provide professional skincare services and high-quality products
+        that help our clients feel confident and comfortable in their own skin.
+      </p>
+      <p>
+        We use <strong>advanced machines and modern technology</strong> in all our procedures to ensure
+        safe, effective, and visible results.
+      </p>
+      <p>
+        We specialize in facial treatments, tattoo removal, acne care, and offer a wide range
+        of premium skincare products, including oils, serums, moisturizers, sunscreens,
+        and Korean beauty brands.
+      </p>
+
+      <h3 class="sub-title">Our Signature Treatments</h3>
+      <ul class="treatment-list">
+        <li><strong>Hydra Facial:</strong> Deep cleansing and hydration using advanced hydra-dermabrasion technology to remove impurities and revitalize your skin.</li>
+        <li><strong>Enzyme Facial:</strong> Natural enzyme-powered exfoliation that brightens and renews your skin gently.</li>
+        <li><strong>CO<sub>2</sub> Laser Treatment:</strong> Performed with precision machines to treat scars, pigmentation, and improve overall skin texture.</li>
+      </ul>
+
+      <p>
+        Whether you visit us for a treatment or shop with us, we are committed to giving you
+        expert advice and excellent customer care.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="images/Maadam.jpg" alt="Professional Skincare">
+    </div>
+  </div>
+</section>
+
+<section id="why-us" class="why-us-container">
+  <div class="why-us-content">
+    <!-- Left column: Heading -->
+    <div class="why-heading-container">
+      <h2>Why Choose My Fair Skin?</h2>
+    </div>
+
+    <!-- Right column: Cards -->
+    <div class="why-us-grid">
+      <div class="why-us-card">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>We Care</h3>
+        <p>Personalized treatments tailored to your skin needs with a touch of genuine care.</p>
+      </div>
+
+      <div class="why-us-card">
+        <i class="fas fa-heart"></i>
+        <h3>We Love</h3>
+        <p>We love bringing out your natural glow using safe and modern skin care techniques.</p>
+      </div>
+
+      <div class="why-us-card">
+        <i class="fas fa-star"></i>
+        <h3>We Value</h3>
+        <p>Your confidence matters to us, and we ensure quality results every time.</p>
+      </div>
+    </div>
+  </div>
+
+ <!-- Extra highlights below (full width) -->
+<div class="about-highlights">
+  <div class="highlight-content">
+    <p><i class="fas fa-heartbeat"></i> Your skin health is our priority.</p>
+    <p><i class="fas fa-spa"></i> We provide the perfect facial skincare service.</p>
+  </div>
+</div>
+</section>
+
+<section id="services">
+  <div class="section-heading">
+    <h2>Our Services</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card" id="facial-treatment">
+      <img src="images/facials.jpg" alt="Facial Treatment" />
+      <h3>Facial Treatments</h3>
+      <p>Deep cleansing and rejuvenation to restore your skin’s glow.</p>
+    </div>
+
+    <div class="service-card" id="large-pores">
+      <img src="images/pores.jpg" alt="Large Pores Removal" />
+      <h3>Large Pores Removal</h3>
+      <p>Minimize visible pores with advanced skin refinement.</p>
+    </div>
+
+    <div class="service-card" id="tattoo-removal">
+      <img src="images/Tattoo.jpg" alt="Tattoo Removal" />
+      <h3>Tattoo Removal</h3>
+      <p>Safe techniques to fade or remove unwanted tattoos.</p>
+    </div>
+
+    <div class="service-card" id="keloid-treatment">
+      <img src="images/keloid.jpg" alt="Keloid Treatment" />
+      <h3>Keloid Treatment</h3>
+      <p>Professional care to reduce and manage keloid growths.</p>
+    </div>
+
+    <div class="service-card" id="wart-removal">
+      <img src="images/warts.jpg" alt="skin tags" />
+      <h3>Skin Tags</h3>
+      <p>Quick and gentle wart removal for smooth skin.</p>
+    </div>
+
+    <div class="service-card" id="freckle-treatment">
+      <img src="images/Freackles.jpg" alt="Freckle Treatment" />
+      <h3>Freckle Treatment</h3>
+      <p>Lighten and balance skin tone with targeted care.</p>
+    </div>
+
+    <div class="service-card" id="scar-treatment">
+      <img src="images/scars.jpg" alt="Scar Treatment" />
+      <h3>Scar Treatment</h3>
+      <p>Reduce the appearance of scars and restore smoothness.</p>
+    </div>
+        <div class="service-card">
+      <img src="images/melasma.jpg" alt="melasma" />
+      <h3>Melasma</h3>
+      <p>Specialized treatments to reduce dark patches and even out skin tone caused by melasma, using advanced skincare techniques tailored to your skin type..</p>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="section-heading">
+    <h2>Our Products</h2>
+  </div>
+
+  <!-- Oils -->
+  <h3 class="product-subheading"><i class="fas fa-seedling"></i> Oils</h3>
+  <div class="services-grid">
+    <div class="product-card" id="palm-oil">
+      <img src="images/palm oil.jpg" alt="Palm Oil" />
+      <h3>Palm Oil</h3>
+      <p>Hydrates and soothes the skin with antioxidant-rich benefits.</p>
+      <p class="price">Tsh 15,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Palm Oil" data-price="15000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="vitamin-e-oil">
+      <img src="images/vitamin E oil.jpg" alt="Vitamin E Oil" />
+      <h3>Vitamin E Oil</h3>
+      <p>Protects skin from free radical damage, moisturizes, and heals.</p>
+      <p class="price">Tsh 20,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Vitamin E Oil" data-price="20000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="glow-oil">
+      <img src="images/Glow oil.jpg" alt="Glow Oil" />
+      <h3>Glow Oil</h3>
+      <p>Lightweight oil that nourishes and leaves skin glowing without feeling greasy.</p>
+      <p class="price">Tsh 15,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Glow Oil" data-price="30000">🛒 Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Serums -->
+  <h3 class="product-subheading"><i class="fas fa-flask"></i> Serums</h3>
+  <div class="services-grid">
+    <div class="product-card" id="anua">
+      <img src="images/anua.jpg" alt="Anua Serum" />
+      <h3>Anua Serum</h3>
+      <p>Soothes and protects with calendula extract and antioxidants.</p>
+      <p class="price">Tsh 75,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Anua Serum" data-price="75000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="nutrica">
+      <img src="images/nutrica c.jpg" alt="NUTRA C (Vitamin C)" />
+      <h3>NUTRA C (Vitamin C)</h3>
+      <p>Brightens skin tone and protects against environmental damage.</p>
+      <p class="price">Tsh 40,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="NUTRA C (Vitamin C)" data-price="40000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="gencell">
+      <img src="images/gencell.jpg" alt="Gencell Collagen" />
+      <h3>Gencell Collagen</h3>
+      <p>Improves skin elasticity and firmness with collagen boost.</p>
+      <p class="price">Tsh 70,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Gencell Collagen" data-price="70000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="the-retinol">
+      <img src="images/the retinol.jpg" alt="The Retinol" />
+      <h3>The Retinol</h3>
+      <p>Reduces wrinkles and supports collagen production.</p>
+      <p class="price">Tsh 60,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="The Retinol" data-price="60000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="power-essence">
+      <img src="images/power essence.jpg" alt="Power Essence" />
+      <h3>Power Essence</h3>
+      <p>Rich in vitamins A & C, reduces scars and fine lines.</p>
+      <p class="price">Tsh 50,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Power Essence" data-price="50000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="anua-10-plus">
+      <img src="images/anua 10+.jpg" alt="Anua 10+" />
+      <h3>Anua 10+</h3>
+      <p>Gentle skincare formula packed with soothing ingredients for sensitive skin.</p>
+      <p class="price">Tsh 75,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Anua 10+" data-price="75000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="dark-knuckle-whitening-serum">
+      <img src="images/Whitening serum.jpg" alt="Dark Knuckle Whitening Serum" />
+      <h3>Dark Knuckle Whitening Serum</h3>
+      <p>Targets dark knuckles and evens skin tone for smoother, brighter hands.</p>
+      <p class="price">Tsh 35,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Dark Knuckle Whitening Serum" data-price="55000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="twelve-grabs-vita-serum">
+      <img src="images/Vita serum.jpg" alt="12 Grabs (Vita Serum)" />
+      <h3>12 Grabs (Vita Serum)</h3>
+      <p>Vitamin-rich serum that revitalizes tired skin and boosts radiance.</p>
+      <p class="price">Tsh 50,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="12 Grabs (Vita Serum)" data-price="65000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="three-seventy-seven">
+      <img src="images/377.jpg" alt="377 Serum" />
+      <h3>377</h3>
+      <p>Potent brightening serum that helps fade dark spots and hyperpigmentation.</p>
+      <p class="price">Tsh 25,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="377" data-price="80000">🛒 Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Moisturizers & Lotions -->
+  <h3 class="product-subheading"><i class="fas fa-water"></i> Moisturizers & Lotions</h3>
+  <div class="services-grid">
+    <div class="product-card" id="power-moisturizer">
+      <img src="images/moisturizer for oily skin.jpg" alt="Moisturizer for Oily Skin" />
+      <h3>Moisturizer for Oily Skin</h3>
+      <p>Hydrates without clogging pores or adding excess oil.</p>
+      <p class="price">Tsh 30,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Moisturizer for Oily Skin" data-price="30000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="power-moisturizer">
+      <img src="images/moisturizer for dry skin.jpg" alt="Moisturizer for Dry Skin" />
+      <h3>Moisturizer for Dry Skin</h3>
+      <p>emollients like shea butter or ceramides, and occlusives like petrolatum or mineral oil are recommended to hydrate, soften, and create a protective barrier. .</p>
+      <p class="price">Tsh 30,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Moisturizer for Oily Skin" data-price="30000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="shea-butter-lotion">
+      <img src="images/shea butter lotion.jpg" alt="Shea Butter Lotion" />
+      <h3>Natural Shea Butter Lotion</h3>
+      <p>Deeply moisturizes dry and damaged skin.</p>
+      <p class="price">Tsh 25,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Natural Shea Butter Lotion" data-price="25000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="olay">
+      <img src="images/olay.jpg" alt="Olay" />
+      <h3>Olay</h3>
+      <p>Moisturizing and anti-aging products for glowing skin.</p>
+      <p class="price">Tsh 50,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Olay" data-price="50000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="my-fair-skin-cream">
+      <img src="images/my fair skin cream.jpg" alt="My Fair Skin Cream" />
+      <h3>My Fair Skin Cream</h3>
+      <p>Brightening cream that evens out skin tone and enhances radiance.</p>
+      <p class="price">Tsh 75,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="My Fair Skin Cream" data-price="75000">🛒 Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Scrubs & Cleansers -->
+  <h3 class="product-subheading"><i class="fas fa-broom"></i> Scrubs & Cleansers</h3>
+  <div class="services-grid">
+    <div class="product-card" id="coffee-scrub">
+      <img src="images/coffee scrub.jpg" alt="Coffee Scrub" />
+      <h3>Coffee Scrub</h3>
+      <p>Removes dead skin and improves texture with coffee granules.</p>
+      <p class="price">Tsh 10,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Coffee Scrub" data-price="10000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="rice-scrub">
+      <img src="images/rice scrub.jpg" alt="Rice Scrub" />
+      <h3>Rice Scrub</h3>
+      <p>Brightens and exfoliates using finely ground rice.</p>
+      <p class="price">Tsh 10,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Rice Scrub" data-price="10000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="gel-cleanser">
+      <img src="images/gel cleanser.jpg" alt="Cleanser" />
+      <h3>Cleanser</h3>
+      <p>Gently removes dirt and oil without drying the skin.</p>
+      <p class="price">Tsh 50,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Cleanser" data-price="50000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="face-wash">
+      <img src="images/face wash.jpg" alt="Face Wash" />
+      <h3>Face Wash</h3>
+      <p>Cleans skin without stripping natural moisture.</p>
+      <p class="price">Tsh 15,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Face Wash" data-price="15000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="shower-gel">
+      <img src="images/shower gel orange.jpg" alt="Shower Gel" />
+      <h3>Shower Gel (Orange Peel)</h3>
+      <p>Refreshing citrus-scented shower gel that cleanses and invigorates.</p>
+      <p class="price">Tsh 10,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Shower Gel (Orange Peel)" data-price="10000">🛒 Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Treatments -->
+  <h3 class="product-subheading"><i class="fas fa-pills"></i> Treatments</h3>
+  <div class="services-grid">
+    <div class="product-card" id="painstak">
+      <img src="images/painstak.jpg" alt="Pain Stak" />
+      <h3>Pain Stak (Acne Treatment)</h3>
+      <p>Targets acne inflammation and clears blemishes.</p>
+      <p class="price">Tsh 20,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Pain Stak (Acne Treatment)" data-price="20000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="collagen">
+      <img src="images/collagen.jpg" alt="Collagen" />
+      <h3>Collagen (Day and Night)</h3>
+      <p>Supports skin elasticity and reduces wrinkles.</p>
+      <p class="price">Tsh 35,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Collagen (Day and Night)" data-price="35000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="intense-pulsed-light">
+      <img src="images/intense pulsed light.jpg" alt="Intense Pulsed Light" />
+      <h3>Intense Pulsed Light (IPL)</h3>
+      <p>Reduces pigmentation and promotes collagen production.</p>
+      <p class="price">Tsh 60,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Intense Pulsed Light (IPL)" data-price="60000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="acne-spot-corrector">
+      <img src="images/acne and spot corrector.jpg" alt="Acne and Spot Corrector" />
+      <h3>Acne and Spot Corrector</h3>
+      <p>Targets blemishes and reduces dark spots for clearer skin.</p>
+      <p class="price">Tsh 5,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Acne and Spot Corrector" data-price="5000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="doxy-capsule">
+      <img src="images/doxy capsulse.jpg" alt="Doxy Capsule" />
+      <h3>Doxy Capsule</h3>
+      <p>Oral antibiotic to help treat acne and skin infections effectively.</p>
+      <p class="price">1pc at Tsh 5,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Doxy Capsule" data-price="5000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="kichuma">
+      <img src="images/kichuma.jpg" alt="Kichuma" />
+      <h3>Kichuma</h3>
+      <p>Herbal remedy known for its skin healing and anti-inflammatory properties.</p>
+      <p class="price">Tsh 5,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Kichuma" data-price="5000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="majano-hai">
+      <img src="images/majano hai.jpg" alt="Majano Hai" />
+      <h3>Majano Hai</h3>
+      <p>Powerful spot treatment that helps fade pigmentation and acne scars.</p>
+      <p class="price">Tsh 5,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Majano Hai" data-price="5000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="podosal">
+      <img src="images/podasal.jpg" alt="Podosal" />
+      <h3>Podosal</h3>
+      <p>Specialized cream to treat fungal infections and soothe irritated skin.</p>
+      <p class="price">Tsh 55,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Podosal" data-price="55000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="sun-cream">
+      <img src="images/sun cream.jpg" alt="Sun Cream" />
+      <h3>Sun Cream</h3>
+      <p>Protects skin from harmful UV rays and prevents sunburn.</p>
+      <p class="price">Tsh 30,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Sun Cream" data-price="30000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="dark-spots-cream">
+      <img src="images/anti spot cream.jpg" alt="Dark Spots Cream" />
+      <h3>Quick Action Cream</h3>
+      <p>Reduces dark spots and evens skin tone.</p>
+      <p class="price">Tsh 15,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Dark Spots Cream" data-price="15000">🛒 Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Whitening & Brightening Treatments -->
+  <h3 class="product-subheading"><i class="fas fa-sparkles"></i> Whitening & Brightening Treatments</h3>
+  <div class="services-grid">
+    <div class="product-card" id="bonneheure">
+      <img src="images/human collagen.jpg" alt="Bonneheure" />
+      <h3>Bonneheure</h3>
+      <p>Premium whitening cream that promotes a more even, luminous complexion.</p>
+      <p class="price">Tsh 60,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Bonneheure" data-price="65000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="bofumi">
+      <img src="images/BOFUMI.jpg" alt="Bofumi" />
+      <h3>Bofumi</h3>
+      <p>Specialized brightening cream designed to reduce dullness and enhance skin clarity.</p>
+      <p class="price">Tsh 30,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Bofumi" data-price="60000">🛒 Add to Cart</button>
+    </div>
+    <div class="product-card" id="soosul-whitening-sleeping-pack">
+      <img src="images/SOOSUL.jpg" alt="Soosul Whitening Sleeping Pack" />
+      <h3>Soosul Whitening Sleeping Pack</h3>
+      <p>Overnight brightening treatment that hydrates and whitens while you sleep.</p>
+      <p class="price">Tsh 70,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Soosul Whitening Sleeping Pack" data-price="70000">🛒 Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Toners & Hydration -->
+  <h3 class="product-subheading"><i class="fas fa-tint"></i> Toners & Hydration</h3>
+  <div class="services-grid">
+    <div class="product-card" id="anua-soothing-toner">
+      <img src="images/soothing toner.jpg" alt="Anua Soothing Toner" />
+      <h3>Anua (Soothing Toner)</h3>
+      <p>Gentle toner infused with calming ingredients to soothe and refresh sensitive skin.</p>
+      <p class="price">Tsh 60,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="Anua (Soothing Toner)" data-price="40000">🛒 Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Professional Skincare -->
+  <h3 class="product-subheading"><i class="fas fa-user-md"></i> Professional Skincare</h3>
+  <div class="services-grid">
+    <div class="product-card" id="the-ordinary">
+      <img src="images/the ordinary.jpg" alt="The Ordinary" />
+      <h3>The Ordinary</h3>
+      <p>Clinical-grade skincare formulas known for their simplicity and effectiveness in targeting skin concerns.</p>
+      <p class="price">Tsh 40,000</p>
+      <p class="in-stock">In Stock</p>
+      <button class="add-to-cart" data-name="The Ordinary" data-price="55000">🛒 Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-heading">
+    <h2>Connect With Us</h2>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/myfairskin_tz?igsh=Nmp2YjlyYXJzaDhn&utm_source=qr" class="social-card" target="_blank">
+      <i class="fab fa-instagram"></i><span>@myfairskin_tz</span>
+    </a>
+    <a href="https://www.facebook.com/share/1RTMoWrJYT/?mibextid=wwXIfr" class="social-card" target="_blank">
+      <i class="fab fa-facebook"></i><span>My Fair Skin Tanzania</span>
+    </a>
+    <a href="https://tiktok.com/@myfairskintz?_t=ZM-8xxypYlJXNN&_r=1" class="social-card" target="_blank">
+      <i class="fab fa-tiktok"></i><span>@myfairskintz</span>
+    </a>
+    <a href="http://www.youtube.com/@myfairskintz" class="social-card" target="_blank">
+      <i class="fab fa-youtube"></i><span>@myfairskin</span>
+    </a>
+  </div>
+</section>
+
+
+  <footer class="footer-bar">
+  <div class="footer-container">
+    <div class="follow-us">
+      <span>Follow Us:</span>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="contact-info">
+      <p>
+        <i class="fas fa-phone"></i>
+        For more information call us:
+        <strong>
+          <a href="tel:+255711746687">+255711746687</a> / 
+          <a href="tel:+255686233436">+255686233436</a>
+        </strong>
+      </p>
+    </div>
+
+    <div class="copyright">
+      <p>© 2025 My Fair Skin - Tanzania. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // 🔍 Search Suggestions: products and services with their element IDs
+  const suggestionsMap = {
+    // Products
+    "Palm Oil": "palm-oil",
+    "Vitamin E Oil": "vitamin-e-oil",
+    "Turmeric Oil": "turmeric-oil",
+    "Anua Serum": "anua",
+    "NUTRA C (Vitamin C)": "nutrica",
+    "Gencell Collagen": "gencell",
+    "The Retinol": "the-retinol",
+    "Power Essence": "power-essence",
+    "Moisturizer for Oily Skin": "power-moisturizer",
+    "Natural Shea Butter Lotion": "shea-butter-lotion",
+    "Olay": "olay",
+    "Coffee Scrub": "coffee-scrub",
+    "Rice Scrub": "rice-scrub",
+    "Cleanser": "gel-cleanser",
+    "Face Wash": "face-wash",
+    "Pain Stak (Acne Treatment)": "painstak",
+    "Collagen (Day and Night)": "collagen",
+    "Intense Pulsed Light (IPL)": "intense-pulsed-light",
+    "Fix Derma (Shadow SPF 50 Plus Gel)": "fix-derma-shadow",
+    "La Roche-Posay": "la-roche-posay",
+    "Torriden": "torriden",
+    "Seoul 1988": "seoul-1988",
+    "Brightening Mask": "brightening-mask",
+    "Anua 10+": "anua-10-plus",
+    "My Fair Skin Cream": "my-fair-skin-cream",
+    "Acne and Spot Corrector": "acne-spot-corrector",
+    "Doxy Capsule": "doxy-capsule",
+    "Kichuma": "kichuma",
+    "Majano Hai": "majano-hai",
+    "Podosal": "podosal",
+    "Sun Cream": "sun-cream",
+    "Tretinoin Gel": "tretinal-gel",
+
+    // New products 
+    "Dark Knuckle Whitening Serum": "dark-knuckle-whitening-serum",
+    "Glow Oil": "glow-oil",
+    "12 Grabs (Vita Serum)": "12-grabs-vita-serum",
+    "377": "377-serum",
+    "Bonneheure": "bonneheure",
+    "Bofumi": "bofumi",
+    "Soosul Whitening Sleeping Pack": "soosul-whitening-sleeping-pack",
+    "Anua (Soothing Toner)": "anua-soothing-toner",
+    "The Ordinary": "the-ordinary",
+
+    // Services
+    "Facial Treatments": "facial-treatment",
+    "Large Pores Removal": "large-pores",
+    "Tattoo Removal": "tattoo-removal",
+    "Keloid Treatment": "keloid-treatment",
+    "Skin Tags": "wart-removal",
+    "Freckle Treatment": "freckle-treatment",
+    "Scar Treatment": "scar-treatment",
+    "Melasma": "melasma"
+  };
+
+  const searchInput = document.getElementById('search-input');
+  const searchList = document.getElementById('search-list');
+  const searchBtn = document.getElementById('search-btn');
+
+  function performSearch() {
+    const input = searchInput.value.toLowerCase().trim();
+    searchList.innerHTML = '';
+
+    if (!input) {
+      searchList.style.display = 'none';
+      return;
+    }
+
+    const matches = Object.keys(suggestionsMap).filter(name =>
+      name.toLowerCase().includes(input)
+    );
+
+    if (matches.length > 0) {
+      matches.forEach(match => {
+        const li = document.createElement('li');
+        li.textContent = match;
+        li.classList.add('suggestion');
+        li.addEventListener('click', () => {
+          searchInput.value = match;
+          searchList.style.display = 'none';
+          scrollToSection(match);
+        });
+        searchList.appendChild(li);
+      });
+      searchList.style.display = 'block';
+    } else {
+      alert('No match found.');
+      searchList.style.display = 'none';
+    }
+  }
+
+  searchInput.addEventListener('input', () => {
+    const input = searchInput.value.toLowerCase().trim();
+    if (!input) {
+      searchList.style.display = 'none';
+      searchList.innerHTML = '';
+      return;
+    }
+    performSearch();
+  });
+
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      performSearch();
+    }
+  });
+
+  searchBtn.addEventListener('click', () => {
+    performSearch();
+  });
+
+  function scrollToSection(name) {
+    const id = suggestionsMap[name];
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Hide suggestion list when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !searchList.contains(e.target) && !searchBtn.contains(e.target)) {
+      searchList.style.display = 'none';
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const themeToggle = document.getElementById("theme-toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+});
+
+</script>
+
+<script>
+// 🏷️ Banners
+function showBanners() {
+  const banners = document.getElementById("banners");
+  if (banners) {
+    banners.style.display = "block";
+    banners.scrollIntoView({ behavior: "smooth" });
+  }
+}
+</script>
+
+<script>
+  const el = document.querySelector('.animated-word');
+  const words = JSON.parse(el.getAttribute('data-words'));
+  let wordIndex = 0;
+  let letterIndex = 0;
+  let typing = true;
+
+  function typeEffect() {
+    const word = words[wordIndex];
+    if (typing) {
+      if (letterIndex < word.length) {
+        el.textContent += word.charAt(letterIndex);
+        letterIndex++;
+        setTimeout(typeEffect, 150);
+      } else {
+        typing = false;
+        setTimeout(typeEffect, 1200); 
+      }
+    } else {
+      if (letterIndex > 0) {
+        el.textContent = word.substring(0, letterIndex - 1);
+        letterIndex--;
+        setTimeout(typeEffect, 70);
+      } else {
+        typing = true;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeEffect, 300);
+      }
+    }
+  }
+
+  typeEffect();
+</script>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" />
+</div>
+
+<script>
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCloseBtn = document.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.product-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightboxCloseBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+<section id="find-us" class="find-us-container">
+  <button id="close-map" class="close-map-btn">×</button>
+  <h2 class="section-title">Find Us</h2>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.85091750764!2d39.21864537280249!3d-6.787989393209128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4ff78d61e20d%3A0xe50dc1c76a145504!2sMY%20FAIR%20SKIN%20SINZA!5e0!3m2!1sen!2stz!4v1753869321262!5m2!1sen!2stz" 
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+  const navButton = document.getElementById('nav-map-button');
+  const findUsSection = document.getElementById('find-us');
+  const closeMap = document.getElementById('close-map');
+
+  navButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    findUsSection.style.display = 'block';
+  });
+
+  closeMap.addEventListener('click', function () {
+    findUsSection.style.display = 'none';
+  });
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const findUsSection = document.getElementById("find-us");
+    const closeBtn = document.getElementById("close-map");
+    const findUsLink = document.querySelector('.nav-item a[href="#find-us"]');
+
+    // Hide the section initially
+    findUsSection.style.display = "none";
+
+    // Show on click
+    findUsLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      findUsSection.style.display = "block";
+      findUsSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    // Close on button click
+    closeBtn.addEventListener("click", () => {
+      findUsSection.style.display = "none";
+    });
+  });
+</script>
+
+<script>
+function openImage(imgElement) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImg.src = imgElement.src;
+}
+
+function closeImage() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+<!-- Floating Button -->
+<button class="floating-btn" onclick="toggleContactPopup()">💬 Get in Touch</button>
+
+<!-- Popup Contact Form -->
+<div class="contact-popup" id="contactPopup">
+  <form id="contactForm">
+    <input type="hidden" name="formtype" value="contactus">
+    <h2>Contact Us</h2>
+
+    <label for="name">Name</label>
+    <input type="text" name="name" required />
+
+    <label for="contact">Contact</label>
+    <input type="text" name="contact" required />
+
+    <label for="email">Email</label>
+    <input type="email" name="email" required />
+
+    <label for="message">Message</label>
+    <textarea name="message" rows="4" required></textarea>
+
+    <button type="submit">Send</button>
+    <button type="button" onclick="toggleContactPopup()">Close</button>
+
+    <div id="formMessage" class="message" style="display:none;"></div>
+  </form>
+</div>
+
+<div id="cart-sidebar">
+  <h2>Shopping Cart</h2>
+  <button id="close-cart" aria-label="Close Cart">&times;</button>
+  
+  <div id="cart-items-section">
+    <div id="cart-items" class="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
+  </div>
+
+  <div class="cart-footer">
+    <p>Total: Tsh <span id="cart-total">0</span></p>
+    <button id="checkout-btn" class="checkout-btn">Checkout</button>
+  </div>
+
+  <form id="customer-form" style="display: none;">
+    <h3 class="form-title">📝 Complete Your Order</h3>
+
+    <input type="hidden" name="formtype" value="cart" />
+
+    <div class="form-group">
+      <label for="customerName">Full Name:</label>
+      <input type="text" id="customerName" name="customerName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="customerName2">Alternate Name (optional):</label>
+      <input type="text" id="customerName2" name="customerName2" />
+    </div>
+
+    <div class="form-group">
+      <label for="customerEmail">Email:</label>
+      <input type="email" id="customerEmail" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="customerPhone">Phone:</label>
+      <input type="tel" id="customerPhone" name="phone" required />
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <input type="text" id="country" name="country" required placeholder="e.g. Tanzania" />
+    </div>
+
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required placeholder="e.g. Dar es Salaam" />
+    </div>
+
+    <div class="form-group">
+      <label for="area">Street / Area Name:</label>
+      <input type="text" id="area" name="address" required placeholder="e.g. Mikocheni, Sam Nujoma Road" />
+    </div>
+
+    <div class="form-group">
+      <label for="paymentMethod">Payment Method:</label>
+      <select id="paymentMethod" name="paymentMethod" required>
+        <option value="">Select a method</option>
+        <option value="Tigo Pesa">Tigo Pesa</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+      </select>
+
+      <div class="payment-instructions" style="display:none; margin-top: 10px;">
+        <p><strong>Send Money to:</strong></p>
+        <ul>
+          <li><strong>Tigo Number:</strong> 0711746687(Janeth Gervas)</li>
+          <li><strong>Lipa Number:</strong> 19912525(My Fair Skin)</li>
+        </ul>
+        <p><em>Please pay before delivery is confirmed.</em></p>
+        <p><em>Note: Transportation costs are to be covered by the customer(Gharama za usafiri zitalipwa na mteja).</em></p>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="checkout-submit-btn">✅ Submit Order</button>
+      <button type="button" id="back-to-cart" class="back-btn">← Back to Cart</button>
+    </div>
+  </form>
+
+  <div id="payment-instructions" style="display:none; padding: 1em; background: #d4edda; border: 1px solid #c3e6cb; margin-top: 1em; color: #155724;">
+    <!-- Success message shown after submit -->
+  </div>
+</div>
+
+<!-- Booking Modal -->
+<div id="booking-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" tabindex="-1">
+
+  <div id="booking-success">Booking submitted successfully! Thank you.</div>
+
+  <div class="modal-content" role="document">
+    <button class="modal-close" aria-label="Close booking form">&times;</button>
+    <h2 id="modal-title">Book a Consultation</h2>
+    <form id="booking-form">
+      <input type="hidden" name="formtype" value="booking" />
+
+      <label for="name">Full Name<span aria-hidden="true">*</span></label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+      <label for="email">Email Address<span aria-hidden="true">*</span></label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+      <label for="phone">Phone Number<span aria-hidden="true">*</span></label>
+      <input type="tel" id="phone" name="phone" required placeholder="0686233436" />
+
+      <label for="date">Preferred Date<span aria-hidden="true">*</span></label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="time">Preferred Time<span aria-hidden="true">*</span></label>
+      <input type="time" id="time" name="time" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="3" placeholder="Reason for booking........"></textarea>
+
+      <button type="submit" class="btn-submit">Submit Booking</button>
+    </form>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  /* ------------------ BOOKING MODAL ------------------ */
+  const openBookingBtn = document.getElementById('open-booking');
+  const bookingModal = document.getElementById('booking-modal');
+  const bookingCloseBtn = bookingModal?.querySelector('.modal-close');
+  const bookingForm = document.getElementById('booking-form');
+  const bookingDateInput = document.getElementById('date');
+  const bookingSuccessMsg = document.getElementById('booking-success');
+
+  if (bookingDateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    bookingDateInput.min = today;
+  }
+
+  openBookingBtn?.addEventListener('click', e => {
+    e.preventDefault();
+    bookingModal?.classList.add('show');
+    if (bookingSuccessMsg) bookingSuccessMsg.style.display = "none";
+  });
+
+  bookingCloseBtn?.addEventListener('click', () => {
+    bookingModal?.classList.remove('show');
+    if (bookingSuccessMsg) bookingSuccessMsg.style.display = "none";
+  });
+
+  bookingModal?.addEventListener('click', e => {
+    if (e.target === bookingModal) {
+      bookingModal.classList.remove('show');
+      if (bookingSuccessMsg) bookingSuccessMsg.style.display = "none";
+    }
+  });
+
+  bookingForm?.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (bookingSuccessMsg) bookingSuccessMsg.style.display = "none";
+
+    const formData = new FormData(bookingForm);
+    const params = new URLSearchParams(formData);
+
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbw_exh8XioEzPS28yIC1GE8qZq8LYf1hwPqdOLlfhpF5w48oyFV5j_VxL3GMhk8D1JIQA/exec', {
+        method: 'POST',
+        body: params
+      });
+      const result = await response.json();
+
+      if (result.result === 'success') {
+        bookingForm.reset();
+        if (bookingSuccessMsg) bookingSuccessMsg.style.display = "block";
+        setTimeout(() => {
+          if (bookingSuccessMsg) bookingSuccessMsg.style.display = "none";
+          bookingModal?.classList.remove('show');
+        }, 3000);
+      } else {
+        alert('Error submitting booking: ' + (result.message || 'Unknown error'));
+      }
+    } catch {
+      alert('Network error. Please try again later.');
+    }
+  });
+
+  /* ------------------ CART FUNCTIONALITY ------------------ */
+  let cart = [];
+  const cartSidebar = document.getElementById('cart-sidebar');
+  const cartItemsSection = document.getElementById('cart-items-section');
+  const cartItemsContainer = document.getElementById('cart-items');
+  const cartTotal = document.getElementById('cart-total');
+  const checkoutBtn = document.getElementById('checkout-btn');
+  const customerForm = document.getElementById('customer-form');
+  const paymentInstructions = document.getElementById('payment-instructions');
+  const closeCartBtn = document.getElementById('close-cart');
+  const backToCartBtn = document.getElementById('back-to-cart');
+  const paymentMethodSelect = document.getElementById('paymentMethod');
+  const paymentInstructionsInForm = customerForm?.querySelector('.payment-instructions');
+
+  if (paymentInstructionsInForm) paymentInstructionsInForm.style.display = 'none';
+  paymentMethodSelect?.addEventListener('change', () => {
+    if (paymentInstructionsInForm) {
+      paymentInstructionsInForm.style.display = paymentMethodSelect.value ? 'block' : 'none';
+    }
+  });
+
+  backToCartBtn?.addEventListener('click', () => {
+    if (customerForm && paymentInstructions && cartItemsSection) {
+      customerForm.style.display = 'none';
+      paymentInstructions.style.display = 'none';
+      cartItemsSection.style.display = 'block';
+    }
+  });
+
+  closeCartBtn?.addEventListener('click', () => {
+    if (cartSidebar && customerForm && paymentInstructions && cartItemsSection) {
+      cartSidebar.classList.remove('open');
+      customerForm.style.display = 'none';
+      paymentInstructions.style.display = 'none';
+      cartItemsSection.style.display = 'block';
+    }
+  });
+
+  function updateCart() {
+    if (!cartItemsContainer || !cartTotal) return;
+    if (cart.length === 0) {
+      cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+      cartTotal.textContent = '0';
+      return;
+    }
+
+    let total = 0;
+    cartItemsContainer.innerHTML = cart.map(item => {
+      const itemTotal = item.price * item.quantity;
+      total += itemTotal;
+      return `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}">
+          <div>
+            <h4>${item.name}</h4>
+            <p>Tsh ${item.price} x ${item.quantity}</p>
+            <div class="qty-controls">
+              <button class="qty-decrease" data-id="${item.id}">−</button>
+              <span>${item.quantity}</span>
+              <button class="qty-increase" data-id="${item.id}">+</button>
+            </div>
+          </div>
+          <button class="remove-item" data-id="${item.id}" title="Remove">🗑️</button>
+        </div>`;
+    }).join('');
+
+    cartTotal.textContent = total.toLocaleString();
+
+    document.querySelectorAll('.remove-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        cart = cart.filter(item => item.id !== btn.dataset.id);
+        updateCart();
+      });
+    });
+    document.querySelectorAll('.qty-increase').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = cart.find(i => i.id === btn.dataset.id);
+        if (item) {
+          item.quantity++;
+          updateCart();
+        }
+      });
+    });
+    document.querySelectorAll('.qty-decrease').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = cart.find(i => i.id === btn.dataset.id);
+        if (item) {
+          if (item.quantity > 1) item.quantity--;
+          else cart = cart.filter(i => i.id !== btn.dataset.id);
+          updateCart();
+        }
+      });
+    });
+  }
+
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+      const productCard = button.closest('.product-card');
+      if (!productCard) return;
+      const name = button.getAttribute('data-name');
+      const price = parseFloat(button.getAttribute('data-price'));
+      const id = productCard.id || name.replace(/\s+/g, '-').toLowerCase();
+      const image = productCard.querySelector('img')?.src || '';
+
+      const existing = cart.find(item => item.id === id);
+      if (existing) existing.quantity++;
+      else cart.push({ id, name, price, image, quantity: 1 });
+
+      updateCart();
+      cartSidebar?.classList.add('open');
+    });
+  });
+
+  document.querySelector('.cart-container')?.addEventListener('click', () => {
+    cartSidebar?.classList.add('open');
+    updateCart();
+  });
+
+  checkoutBtn?.addEventListener('click', e => {
+    e.preventDefault();
+    if (cart.length === 0) {
+      alert('Your cart is empty!');
+      return;
+    }
+    cartItemsSection.style.display = 'none';
+    customerForm.style.display = 'block';
+    paymentInstructions.style.display = 'none';
+  });
+
+  customerForm?.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (cart.length === 0) {
+      alert('Your cart is empty!');
+      return;
+    }
+
+    const formData = new FormData(customerForm);
+    const customerDetails = Object.fromEntries(formData.entries());
+    const place = `${customerDetails.country || ''}, ${customerDetails.city || ''}, ${customerDetails.address || ''}`;
+    const productList = cart.map(item => `${item.name} (x${item.quantity})`).join(', ');
+    const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+    try {
+      const params = new URLSearchParams();
+      params.append('formtype', 'cart');
+      params.append('name', customerDetails.customerName || '');
+      params.append('phone', customerDetails.phone || '');
+      params.append('email', customerDetails.email || '');
+      params.append('place', place);
+      params.append('product', productList);
+      params.append('quantity', cart.reduce((sum, item) => sum + item.quantity, 0));
+      params.append('totalprice', totalPrice);
+
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyjdkHed74yTb7A2EPKYybXIeDiHeOqXEaw6nawKUbw1YvYBBgPEIIlY9qE39dWUpBIcA/exec', {
+        method: 'POST',
+        body: params
+      });
+      if (!response.ok) throw new Error('Network error');
+
+      cart = [];
+      updateCart();
+      customerForm.reset();
+
+      paymentInstructions.innerHTML = `
+        <h3>✅ Thank you! Your order was placed successfully.</h3>
+        <p>Send your payment to:</p>
+        <ul>
+          <li><strong>0711746687</strong></li>
+          <li><strong>0686233436</strong></li>
+        </ul>
+        <p>Delivery starts after payment confirmation.</p>`;
+      customerForm.style.display = 'none';
+      paymentInstructions.style.display = 'block';
+    } catch (error) {
+      alert('Something went wrong: ' + error.message);
+    }
+  });
+
+  /* ------------------ CONTACT POPUP ------------------ */
+  const contactPopup = document.getElementById('contactPopup');
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+
+window.toggleContactPopup = function () {
+  if (!contactPopup) return;
+  if (contactPopup.style.display !== 'block') {
+    contactPopup.style.display = 'block';
+    contactPopup.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  } else {
+    contactPopup.style.display = 'none';
+  }
+};
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!formMessage) return;
+
+    formMessage.textContent = "Sending your message...";
+    formMessage.className = "message";
+    formMessage.style.display = "block";
+
+    fetch('https://script.google.com/macros/s/AKfycbzwMue4ewzEeKOEqlpiaLONW8zqIWrnf8Pl5EdmXaTWWWxzbqrRwNl0scX8xZPZb76WyA/exec', {
+      method: 'POST',
+      body: new FormData(contactForm)
+    })
+    .then(response => {
+      if (response.ok) {
+        formMessage.textContent = "Thank you! Your message has been sent 💖";
+        formMessage.className = "message success";
+        contactForm.reset();
+        setTimeout(() => {
+          formMessage.style.display = "none";
+          window.toggleContactPopup();
+        }, 2000);
+      } else {
+        throw new Error("Error");
+      }
+    })
+    .catch(() => {
+      formMessage.textContent = "Oops! Please try again.";
+      formMessage.className = "message error";
+    });
+  });
+}
+
+});
+</script>
+
+</body>
+</html>                   
