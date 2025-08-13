@@ -884,48 +884,45 @@ body {
 
 @media (max-width: 768px) {
   .hero-content {
-    flex-direction: column; /* stack vertically: text -> features -> image -> buttons */
+    flex-direction: column; /* stack main sections: text -> features -> image -> buttons */
     align-items: center;
     gap: 20px;
   }
 
   .hero-text {
-    order: 1;
     width: 100%;
     text-align: center;
   }
 
   /* Keep features horizontal */
   .hero-features {
-    order: 2;
     display: flex;
-    flex-direction: row; /* side by side */
-    flex-wrap: wrap; /* allow wrapping if too narrow */
+    flex-direction: row; /* always horizontal */
+    flex-wrap: nowrap;   /* prevent wrapping */
     justify-content: center;
     gap: 15px;
     width: 100%;
-    margin-top: 15px;
+    overflow-x: auto;    /* allow scrolling if too wide */
+    padding-bottom: 10px; /* optional spacing below features */
   }
 
   .feature-item {
-    flex: 1 1 150px; /* min width for each feature card */
-    max-width: 200px; /* optional limit */
+    flex: 0 0 150px; /* fixed width for each card */
     height: auto;
-    margin-bottom: 0; /* spacing handled by gap */
+    margin-bottom: 0;
+    min-width: 150px; /* ensure each card has minimum size */
   }
 
   /* Image below features */
   .hero-image {
-    order: 3;
     width: 80%;
     max-width: 300px;
-    margin-top: 15px;
     border-radius: 15px;
+    margin-top: 15px;
   }
 
   /* Buttons side by side below image */
   .hero-buttons {
-    order: 4;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
