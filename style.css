@@ -884,7 +884,7 @@ body {
 
 @media (max-width: 768px) {
   .hero-content {
-    flex-direction: column;      /* stack vertically */
+    flex-direction: column; /* stack vertically */
     align-items: center;
     gap: 20px;
   }
@@ -903,7 +903,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   .feature-item {
@@ -925,10 +925,9 @@ body {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }
-
 
 .top-bar {
   display: flex;
