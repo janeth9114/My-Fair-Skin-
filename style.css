@@ -2044,7 +2044,8 @@ button.btn-submit:hover {
 
 
 
-/*mobile responsive/tablet*/
+/* ---------------------- MOBILE RESPONSIVE / TABLET ---------------------- */
+
 /* BASE RESPONSIVENESS FOR ALL SECTIONS */
 body, html {
   margin: 0;
@@ -2060,7 +2061,7 @@ img {
   display: block;
 }
 
-/* Containers with fixed max-width should be fluid on small devices */
+/* Containers should be fluid on small devices */
 .container, .about-box, .services-grid, .products-grid {
   width: 90%;
   max-width: 1100px;
@@ -2071,7 +2072,6 @@ img {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
-
 
 /* GRID LAYOUTS (products, services, about, etc.) */
 .services-grid, .products-grid, .about-box {
@@ -2092,32 +2092,53 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.5rem;
 }
-
 h2 {
   font-size: 2rem;
 }
-
 h3 {
   font-size: 1.5rem;
 }
-
 p, li {
   font-size: 1rem;
   line-height: 1.5;
 }
 
+/* REDUCE FONT SIZES FOR TABLETS */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.2rem;
-  }
-  p, li {
-    font-size: 0.9rem;
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+  p, li { font-size: 0.9rem; }
+}
+
+/* HERO SECTION FIX */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.hero-container img.hero-image {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+/* NAVBAR */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 }
 
@@ -2162,7 +2183,7 @@ input[type="text"], input[type="email"], textarea {
   box-sizing: border-box;
 }
 
-/* Adjust padding/margin globally */
+/* ADJUST PADDING GLOBALLY */
 section {
   padding: 40px 20px;
 }
@@ -2173,7 +2194,19 @@ section {
   }
 }
 
-/* FOOTER (if any) */
+/* PRODUCT GRID FOR MOBILE */
+.products-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* FOOTER */
 footer {
   padding: 20px;
   text-align: center;
@@ -2181,7 +2214,7 @@ footer {
   background: #f9f9f9;
 }
 
-/* Utility: Center elements */
+/* UTILITY: CENTER ELEMENTS */
 .centered {
   display: flex;
   justify-content: center;
@@ -2192,10 +2225,14 @@ footer {
 ::-webkit-scrollbar {
   width: 5px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0.1);
   border-radius: 10px;
 }
 
-/* Add more tweaks as you need! */
+/* ADDITIONAL TWEAKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
